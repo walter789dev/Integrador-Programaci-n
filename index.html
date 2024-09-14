@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Proyecto Final</title>
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- HEADER   -->
+    <header class="header">
+      <div class="header__container">
+        <div class="header__search">
+          <input
+            class="header__searchInput"
+            type="text"
+            placeholder="Ingrese un elemento"
+          />
+          <button class="header__searchBtn">
+            Buscar
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+        <button class="header__btn">
+          Agregar Elemento
+          <span class="material-symbols-outlined"> add_circle </span>
+        </button>
+      </div>
+    </header>
+    <main class="view">
+      <!--  CATEGORIAS  -->
+      <aside class="list">
+        <h2 class="list__title">
+          Categorias
+          <span class="material-symbols-outlined"> filter_list </span>
+        </h2>
+        <ul class="list__filter"></ul>
+      </aside>
+
+      <!--  ELEMENTOS ALMACENADOS-->
+      <section class="store"></section>
+
+      <!--  POPUP -->
+      <div class="popUp">
+        <div class="popUp__content">
+          <h2 class="popUp__title">Agregar o modificar un producto</h2>
+          <div class="popUp__form">
+            <input type="text" placeholder="Ingresa un nombre" id="nombre" />
+            <input type="text" placeholder="Ingrese una imagen" id="imagen" />
+            <input type="number" value="0" id="precio" />
+            <select id="categoria">
+              <option>Selecciona una categoria</option>
+              <option value="gaseosas">Gaseosas</option>
+              <option value="hamburguesas">Hamburguesas</option>
+              <option value="papas">Papas</option>
+            </select>
+          </div>
+          <div class="popUp__buttons">
+            <button class="popUp__btn" id="cancel">Cancelar</button>
+            <button class="popUp__btn" id="accept">Aceptar</button>
+            <button class="popUp__btn" id="delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
